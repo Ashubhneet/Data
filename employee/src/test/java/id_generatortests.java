@@ -1,0 +1,23 @@
+import org.employee.employee;
+import org.employee.employee_repos;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+class id_genratortests{
+    @Autowired
+    employee_repos emprs;
+    @Test
+    void contextLoads() {
+    }
+    @Test
+    public void testcreate(){
+        employee emp = new employee();
+        emp.setName("shubh");
+        emprs.save(emp);
+    }
+}
